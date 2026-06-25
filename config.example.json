@@ -1,0 +1,59 @@
+{
+  "template_path": "modele.example.png",
+  "csv_path": "data.example.csv",
+  "csv_delimiter": ",",
+  "debug": false,
+  "output_path": "output.example.pdf",
+  "page": {
+    "width_mm": 210,
+    "height_mm": 297
+  },
+  "ticket": {
+    "width_mm": 90,
+    "height_mm": 56
+  },
+  "spacing": {
+    "horizontal_mm": 0,
+    "vertical_mm": 0
+  },
+  "layout": {
+    "columns": 2,
+    "rows": 4
+  },
+  "crop_marks": {
+    "enabled": true,
+    "color": "#000000",
+    "line_width": 0.5,
+    "length_mm": 8,
+    "exterior_only": true
+  },
+  "fields": [
+    {
+      "csv_field": "Prénom-Nom",
+      "position": [450, 219],
+      "font_path": "fonts/Poppins-SemiBold.ttf",
+      "font_size": 58,
+      "align": "center",
+      "anchor": "centre-haut",
+      "color": "black"
+    },
+    {
+      "csv_field": "Poste",
+      "position": [450, 295],
+      "font_path": "fonts/Poppins-Medium.ttf",
+      "font_size": 42,
+      "align": "center",
+      "anchor": "centre-haut",
+      "color": "#333333"
+    },
+    {
+      "csv_field": "Structure",
+      "position": [450, 365],
+      "font_path": "fonts/Poppins-Medium.ttf",
+      "font_size": 38,
+      "align": "center",
+      "anchor": "centre-haut",
+      "color": "#4D4D4D"
+    }
+  ]
+}
