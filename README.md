@@ -5,9 +5,9 @@ Ce projet génère un PDF de planches de billets à partir d'un modèle image, d
 ## Contenu
 
 - [generator.py](generator.py) : script principal.
-- [src/config.example.json](src/config.example.json) : modèle de configuration à copier pour démarrer.
-- [src/data.example.csv](src/data.example.csv) : exemple de structure CSV à copier ou adapter.
-- [src/modele.example.png](src/modele.example.png) : image du ticket à personnaliser.
+- [config.json](config.json) : modèle de configuration à copier pour démarrer.
+- [data.csv](data.csv) : exemple de structure CSV à copier ou adapter.
+- [modele.png](modele.png) : image du ticket à personnaliser.
 - [fonts/](fonts/) : polices utilisées pour le rendu.
 
 ## Installation
@@ -26,8 +26,8 @@ pip install -r requirements.txt
 ## Utilisation
 
 1. Vérifier que le fichier CSV contient bien les colonnes attendues par la configuration.
-2. Utiliser [src/config.json](src/config.json) directement, ou copier [src/config.example.json](src/config.example.json) si tu veux repartir d'un modèle propre.
-3. Vérifier que le CSV et le modèle image pointés par la config existent bien dans `src/`.
+2. Modifier [config.json](config.json).
+3. Vérifier que le CSV et le modèle image pointés par la config existent bien.
 4. Lancer le script :
 
 ```bash
@@ -40,11 +40,11 @@ Le PDF est généré dans `output.pdf` par défaut.
 
 Le fichier de configuration est un JSON avec les clés suivantes :
 
-- `template_path` : chemin vers l'image du ticket, résolu depuis `src/`.
-- `csv_path` : chemin vers le fichier de données CSV, résolu depuis `src/`.
+- `template_path` : chemin vers l'image du ticket.
+- `csv_path` : chemin vers le fichier de données CSV.
 - `csv_delimiter` : séparateur utilisé dans le CSV.
 - `debug` : active ou non les sorties de débogage.
-- `output_path` : chemin du PDF généré, résolu depuis `src/`.
+- `output_path` : chemin du PDF généré.
 - `page` : dimensions de la page en millimètres.
 - `ticket` : dimensions d'un ticket en millimètres.
 - `spacing` : espacement horizontal et vertical entre tickets.
@@ -58,7 +58,7 @@ Chaque élément de `fields` contient :
 
 - `csv_field` : nom exact de la colonne CSV à afficher.
 - `position` : coordonnées `[x, y]` du point d'ancrage.
-- `font_path` : chemin vers la police, résolu depuis `src/`.
+- `font_path` : chemin vers la police
 - `font_size` : taille de la police.
 - `align` : alignement horizontal (`left`, `center`, `right`).
 - `anchor` : ancrage vertical du texte.
@@ -72,9 +72,8 @@ La configuration actuelle utilise les colonnes suivantes :
 - `Poste`
 - `Structure`
 
-Le fichier [src/data.example.csv](src/data.example.csv) montre un exemple minimal compatible avec le script, et [src/config.example.json](src/config.example.json) pointe vers cet exemple.
+Le fichier [data.csv](data.csv) montre un exemple minimal compatible avec le script, et [config.json](config.json) pointe vers cet exemple.
 
 ## Notes
 
-- Les chemins dans la config sont relatifs au dossier `src/`, ce qui permet de cloner et exécuter le dépôt ailleurs sans modification.
 - Le script ignore les champs vides dans le CSV.
