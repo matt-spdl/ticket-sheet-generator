@@ -1,14 +1,9 @@
 __pycache__/
 .idea/
 *.pyc
-tickets_output.pdf
-output.pdf
-output.example.pdf
 debug_template.png
 debug_text.png
 debug_boxes.png
 debug_result.png
 .venv/
 venv/
-config.json
-data.csv

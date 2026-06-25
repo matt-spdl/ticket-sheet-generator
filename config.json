@@ -1,9 +1,9 @@
 {
-  "template_path": "modele.example.png",
-  "csv_path": "data.example.csv",
+  "template_path": "modele.png",
+  "csv_path": "data.csv",
   "csv_delimiter": ",",
   "debug": false,
-  "output_path": "output.example.pdf",
+  "output_path": "output.pdf",
   "page": {
     "width_mm": 210,
     "height_mm": 297

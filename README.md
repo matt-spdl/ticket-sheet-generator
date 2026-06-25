@@ -5,9 +5,7 @@ Ce projet génère un PDF de planches de billets à partir d'un modèle image, d
 ## Contenu
 
 - [generator.py](generator.py) : script principal.
-- [src/config.json](src/config.json) : configuration active utilisée par défaut.
 - [src/config.example.json](src/config.example.json) : modèle de configuration à copier pour démarrer.
-- [src/data.csv](src/data.csv) : données réelles utilisées par défaut.
 - [src/data.example.csv](src/data.example.csv) : exemple de structure CSV à copier ou adapter.
 - [src/modele.example.png](src/modele.example.png) : image du ticket à personnaliser.
 - [fonts/](fonts/) : polices utilisées pour le rendu.
